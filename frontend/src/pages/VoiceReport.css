@@ -1,0 +1,94 @@
+.voice-page { display: flex; flex-direction: column; gap: 24px; max-width: 720px; margin: 0 auto; }
+
+.voice-header { text-align: center; }
+.voice-title { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 1.5rem; font-weight: 800; margin-bottom: 8px; }
+.voice-sub { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+
+.voice-unsupported { padding: 20px; font-size: 0.85rem; color: var(--amber); text-align: center; }
+
+/* Mic button */
+.voice-center { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 20px 0; }
+
+.mic-ring {
+  width: 140px; height: 140px; border-radius: 50%;
+  background: rgba(245,158,11,0.06);
+  border: 2px solid rgba(245,158,11,0.15);
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.3s;
+}
+.mic-ring-active {
+  background: rgba(239,68,68,0.08);
+  border-color: rgba(239,68,68,0.3);
+  animation: mic-outer-pulse 1.5s ease-in-out infinite;
+}
+.mic-ring-2 {
+  width: 108px; height: 108px; border-radius: 50%;
+  background: rgba(245,158,11,0.08);
+  border: 2px solid rgba(245,158,11,0.2);
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.3s;
+}
+.mic-ring-2-active {
+  background: rgba(239,68,68,0.12);
+  border-color: rgba(239,68,68,0.4);
+  animation: mic-inner-pulse 1.2s ease-in-out infinite;
+}
+.mic-btn {
+  width: 78px; height: 78px; border-radius: 50%;
+  background: var(--bg-surface);
+  border: 2px solid var(--amber);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all 0.25s;
+  box-shadow: 0 0 24px rgba(245,158,11,0.2);
+}
+.mic-btn-active {
+  background: rgba(239,68,68,0.2);
+  border-color: #ef4444;
+  box-shadow: 0 0 32px rgba(239,68,68,0.4);
+}
+.mic-btn:hover { transform: scale(1.06); }
+@keyframes mic-outer-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.06); opacity: 0.8; }
+}
+@keyframes mic-inner-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+.mic-status { font-size: 0.82rem; color: var(--text-secondary); font-weight: 500; }
+
+/* Transcript */
+.voice-transcript { padding: 16px 20px; }
+.transcript-label { font-size: 0.6rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--amber); margin-bottom: 10px; }
+.transcript-text { font-size: 0.9rem; line-height: 1.8; color: var(--text-primary); min-height: 60px; }
+.interim-text { color: var(--text-muted); font-style: italic; }
+
+/* Actions */
+.voice-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+
+/* Result */
+.voice-result { padding: 20px; border-top: 3px solid var(--border); }
+.voice-result.tier-high { border-top-color: #ef4444; }
+.voice-result.tier-medium { border-top-color: var(--amber); }
+.voice-result.tier-low { border-top-color: #22c55e; }
+.vr-header { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+.vr-conf { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
+.vr-saved { font-size: 0.75rem; color: #22c55e; font-weight: 700; }
+.vr-rules { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.vr-delta { font-size: 0.82rem; color: var(--amber); font-weight: 600; margin-bottom: 10px; }
+.vr-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 6px; }
+.vr-spans { display: flex; gap: 6px; flex-wrap: wrap; }
+
+/* Tips */
+.voice-tips { padding: 16px 20px; }
+.tip-list { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+.tip-item {
+  display: flex; gap: 12px; align-items: center;
+  padding: 10px 14px; border-radius: var(--radius-sm);
+  background: var(--bg-base); border: 1px solid var(--border);
+  cursor: pointer; transition: all 0.2s;
+}
+.tip-item:hover { border-color: var(--amber); background: rgba(245,158,11,0.04); }
+.tip-num { font-size: 0.65rem; font-weight: 800; color: var(--amber); min-width: 18px; }
+.tip-text { font-size: 0.78rem; color: var(--text-secondary); font-style: italic; flex: 1; line-height: 1.5; }
+.tip-use { font-size: 0.68rem; color: var(--amber); font-weight: 700; white-space: nowrap; }

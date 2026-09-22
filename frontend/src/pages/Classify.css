@@ -1,0 +1,85 @@
+.classify-page { display: flex; flex-direction: column; gap: 20px; }
+
+.classify-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+
+.classify-form { padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+
+.narrative-input {
+  width: 100%;
+  resize: vertical;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.classify-meta-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.classify-meta-row input { width: 100%; }
+
+.classify-actions {
+  display: flex;
+  gap: 10px;
+}
+.classify-actions .classify-btn { flex: 1; }
+
+.save-success {
+  font-size: 0.82rem;
+  color: #4ade80;
+  background: rgba(34,197,94,0.1);
+  border: 1px solid var(--green-low);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+}
+
+.tier-badge { font-size: 0.65rem; }
+
+.classify-result { display: flex; flex-direction: column; }
+
+.result-placeholder {
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.result-card { padding: 24px; display: flex; flex-direction: column; gap: 18px; }
+.tier-border-high { border-left: 4px solid var(--red-high); }
+.tier-border-medium { border-left: 4px solid var(--orange-med); }
+.tier-border-low { border-left: 4px solid var(--green-low); }
+.tier-border-uncertain { border-left: 4px solid var(--blue-uncertain); }
+
+.result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.result-badge { font-size: 0.85rem; padding: 6px 14px; }
+.result-conf { font-size: 0.82rem; color: var(--text-secondary); font-weight: 600; }
+
+.result-delta {
+  background: var(--bg-hover);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+.delta-row { display: flex; align-items: center; justify-content: space-between; font-size: 0.82rem; color: var(--text-secondary); gap: 8px; }
+.delta-value { font-weight: 700; font-size: 0.82rem; }
+
+.result-section { display: flex; flex-direction: column; gap: 8px; }
+.result-section .rules-list { gap: 6px; }
+.result-section .rule-item { font-size: 0.82rem; }
+
+.result-safety-note {
+  background: var(--bg-hover);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .classify-grid { grid-template-columns: 1fr; }
+}

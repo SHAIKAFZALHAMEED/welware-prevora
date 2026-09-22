@@ -1,0 +1,20 @@
+# Node
+frontend/node_modules/
+frontend/dist/
+node-v22.11.0-win-x64/
+node.zip
+
+# Python
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.pyc
+backend/.venv/
+backend/venv/
+
+# Database (auto-reseeded on deploy)
+backend/prevora.db
+
+# Misc
+.env
+*.zip
+ngrok*

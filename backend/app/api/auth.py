@@ -9,7 +9,7 @@ router = APIRouter()
 # This is a prototype — no real data, no real users.
 DEMO_USERS = {
     "hse@prevora.demo": {
-        "password": "prevora2026",
+        "password": "welware04",
         "name": "SHAIK AFZAL HAMEED",
         "role": "HSE Officer",
         "role_code": "hse",
@@ -41,8 +41,8 @@ DEMO_USERS = {
         "primary_demo": False,
     },
     # Legacy accounts — kept for backward compat with existing sessions
-    "hse@oil.in":   {"password": "prevora2026", "name": "SHAIK AFZAL HAMEED", "role": "HSE Officer",  "role_code": "hse",   "access": "", "primary_demo": False},
-    "admin@oil.in": {"password": "admin2026",   "name": "SHAIK AFZAL HAMEED", "role": "System Admin", "role_code": "admin", "access": "", "primary_demo": False},
+    "hse@oil.in":   {"password": "welware04", "name": "SHAIK AFZAL HAMEED", "role": "HSE Officer",  "role_code": "hse",   "access": "", "primary_demo": False},
+    "admin@oil.in": {"password": "welware04", "name": "SHAIK AFZAL HAMEED", "role": "System Admin", "role_code": "admin", "access": "", "primary_demo": False},
 }
 
 

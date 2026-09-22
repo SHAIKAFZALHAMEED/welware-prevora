@@ -135,7 +135,7 @@ export default function Login({ onLogin }) {
   const handleEnter = async () => {
     setLoading(true)
     try {
-      const res = await api.login('hse@prevora.demo', 'prevora2026')
+      const res = await api.login('hse@prevora.demo', 'welware04')
       tokenRef.current = res.token
       userRef.current  = { name: res.name, role: res.role, email: res.email }
     } catch {
